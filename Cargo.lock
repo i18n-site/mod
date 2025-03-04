@@ -102,6 +102,7 @@ name = "auth_"
 version = "0.1.0"
 dependencies = [
  "aok",
+ "cookie_b",
  "ctx_",
  "header_host",
  "http",
