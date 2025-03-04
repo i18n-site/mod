@@ -102,12 +102,12 @@ name = "auth_"
 version = "0.1.0"
 dependencies = [
  "aok",
- "cookie_set",
  "ctx_",
  "header_host",
  "http",
  "iat",
  "icall",
+ "set_cookie",
  "tokio",
  "tracing",
  "xboot",
@@ -1945,6 +1945,16 @@ dependencies = [
  "itoa",
  "ryu",
  "serde",
+]
+
+[[package]]
+name = "set_cookie"
+version = "0.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "92a6b78fc234fbaeb551fb7f31bac90dd6a5b8cfe7e97689b62562b617e90773"
+dependencies = [
+ "aok",
+ "http",
 ]
 
 [[package]]

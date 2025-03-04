@@ -1,5 +1,5 @@
 use header_host::header_host;
-use cookie_set::SET_COOKIE;
+use set_cookie::SET_COOKIE;
 use aok::{OK, Result, anyhow};
 use http::HeaderMap;
 use ctx_::SetHeader;
@@ -12,7 +12,7 @@ pub async fn mail(
   set_header: &SetHeader,
 ) -> Result<()> {
   let host = header_host(headers)?;
-  let cookie = cookie::Cookie::new(xtld::host_tld(host));
+  let cookie = set_cookie::new(xtld::host_tld(host));
 
   let uid = "xxxx";
 
