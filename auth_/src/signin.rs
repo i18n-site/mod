@@ -1,7 +1,7 @@
 use header_host::header_host;
 use set_cookie::SET_COOKIE;
 use aok::{OK, Result};
-use http::{HeaderMap, request};
+use http::HeaderMap;
 use ctx_::SetHeader;
 
 #[iat::captcha]
