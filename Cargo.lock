@@ -102,7 +102,9 @@ name = "auth_"
 version = "0.1.0"
 dependencies = [
  "aok",
+ "cookie_set",
  "ctx_",
+ "header_host",
  "http",
  "iat",
  "icall",
@@ -356,9 +358,9 @@ checksum = "396de984970346b0d9e93d1415082923c679e5ae5c3ee3dcbd104f5610af126b"
 
 [[package]]
 name = "cookie_b"
-version = "0.1.9"
+version = "0.1.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e80fbe0156d6090b9cda4304a1157bf25aed3667347259135f3660cc974c5957"
+checksum = "be3808d319e2991418bb71c0a3d26c52758458a3e4706cd9c8ddd2b75799c957"
 dependencies = [
  "axum",
  "cookie_set",
@@ -372,9 +374,9 @@ dependencies = [
 
 [[package]]
 name = "cookie_set"
-version = "0.1.4"
+version = "0.1.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a3d2212b0fa25949af1b178b8f053b15d5af70cfae37e06917075af2a349505c"
+checksum = "13be35e126ada01206d25ef9382ee2e3d5f57fb678d24ce74aae2cef13624546"
 dependencies = [
  "aok",
  "http",

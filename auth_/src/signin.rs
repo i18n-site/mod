@@ -1,3 +1,5 @@
+use header_host::header_host;
+use cookie_set::SET_COOKIE;
 use aok::{OK, Result, anyhow};
 use http::HeaderMap;
 use ctx_::SetHeader;
@@ -9,25 +11,12 @@ pub async fn mail(
   headers: &HeaderMap,
   set_header: &SetHeader,
 ) -> Result<()> {
-  let host = if let Some(host) = headers.get("x-forwarded-host") {
-    host
-  } else if let Some(host) = headers.get("host") {
-    host
-  } else {
-    Err(anyhow!("no host"))?;
-    unreachable!();
-  }
-  .to_str()?;
+  let host = header_host(headers)?;
+  let cookie = cookie::Cookie::new(xtld::host_tld(host));
 
-  let tld = xtld::host_tld(host);
-  dbg!(&headers);
+  let uid = "xxxx";
 
-  let browser_id = "xxx";
-
-  // set_header.push(
-  //   SET_COOKIE,
-  //   format!("b={browser_id}; Domain={tld}; Max-Age=99999999; Secure; HttpOnly;  Path=/; Partitioned;"),
-  // );
+  set_header.push(SET_COOKIE, cookie.set_max("u", uid));
 
   OK
 }
