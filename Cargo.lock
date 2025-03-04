@@ -110,6 +110,7 @@ dependencies = [
  "set_cookie",
  "tokio",
  "tracing",
+ "ub64",
  "xboot",
  "xtld",
 ]
@@ -434,7 +435,7 @@ dependencies = [
  "dashmap",
  "http",
  "icall",
- "intbin",
+ "intbin 0.1.2",
  "parking_lot 0.12.3",
  "tokio",
  "tracing",
@@ -1132,6 +1133,12 @@ checksum = "e0242819d153cba4b4b05a5a8f2a7e9bbf97b6055b2a002b395c96b5ff3c0222"
 dependencies = [
  "cfg-if",
 ]
+
+[[package]]
+name = "intbin"
+version = "0.0.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f7d0cd59142d2aec41e99627d7cf01f99af8599b286b1e02fdce8b926dff655e"
 
 [[package]]
 name = "intbin"
@@ -2435,6 +2442,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7b9771a8a948d0ba785935e44ee6d0e735982d10614de9b342c99f1ca7feddda"
 dependencies = [
  "base64 0.21.7",
+ "intbin 0.0.5",
 ]
 
 [[package]]

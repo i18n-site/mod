@@ -18,6 +18,7 @@ tracing = "0.1.41"
 xtld = "0.1.5"
 header_host = "0.1.1"
 set_cookie = "0.1.2"
+ub64 = { version = "0.1.11", features = ["u64"] }
 
 [dev-dependencies]
 tokio = { version = "1.43.0", features = ["macros", "rt", "rt-multi-thread"] }
