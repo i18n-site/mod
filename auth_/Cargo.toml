@@ -1,0 +1,22 @@
+[package]
+name = "auth_"
+version = "0.1.0"
+edition = "2024"
+license = "MulanPSL-2.0"
+repository = "https://github.com/i18n-site/mod.git"
+homepage = "https://github.com/i18n-site/mod/tree/dev/mod/auth_"
+description = "auth"
+keywords = ["hpc", "mod"]
+
+[dependencies]
+aok = "0.1.17"
+http = "1.2.0"
+iat = { version = "0.1.2" }
+icall = "0.1.46"
+ctx_ = { version = "0.1.4", features = ["set_header"] }
+tracing = "0.1.41"
+xtld = "0.1.5"
+
+[dev-dependencies]
+tokio = { version = "1.43.0", features = ["macros", "rt", "rt-multi-thread"] }
+xboot = "0.1.28"
