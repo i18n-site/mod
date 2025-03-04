@@ -13,9 +13,7 @@ pub async fn mail(
 ) -> Result<()> {
   let host = header_host(headers)?;
   let cookie = set_cookie::new(xtld::host_tld(host));
-
   let uid = 12;
-
   set_header.push(SET_COOKIE, cookie.set_max("u", ub64::u64_b64(uid)));
 
   OK
