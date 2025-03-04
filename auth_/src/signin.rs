@@ -1,6 +1,6 @@
 use header_host::header_host;
 use set_cookie::SET_COOKIE;
-use aok::{OK, Result, anyhow};
+use aok::{OK, Result};
 use http::HeaderMap;
 use ctx_::SetHeader;
 
