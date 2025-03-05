@@ -20,6 +20,12 @@ header_host = "0.1.1"
 set_cookie = "0.1.6"
 ub64 = { version = "0.1.11", features = ["u64"] }
 cookie_b = "0.1.16"
+sts = "0.1.23"
+xbin = "0.1.6"
+intbin = "0.1.2"
+xkv = { version = "0.1.44", features = ["r"] }
+tokio = { version = "1.43.0", features = ["rt"] }
+simple-useragent = "0.1.2"
 
 [dev-dependencies]
 tokio = { version = "1.43.0", features = ["macros", "rt", "rt-multi-thread"] }
