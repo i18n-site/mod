@@ -360,9 +360,9 @@ checksum = "396de984970346b0d9e93d1415082923c679e5ae5c3ee3dcbd104f5610af126b"
 
 [[package]]
 name = "cookie_b"
-version = "0.1.13"
+version = "0.1.16"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0902eb8092994e73c781940d3d58e35ef7aae96e128f26c76a0a562ce8df2067"
+checksum = "7e1c8b7b1e9429481e0b1dbf3715384b50a652a1f76b20f65e8442034f5d92ea"
 dependencies = [
  "axum",
  "header_host",
@@ -1947,9 +1947,9 @@ dependencies = [
 
 [[package]]
 name = "set_cookie"
-version = "0.1.2"
+version = "0.1.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "96832f1a19a4247e85b71451a01b825ab73dc589947f9baa88ac497114a9f816"
+checksum = "61614391a9cc9af4de4e2e8c34b4164c4c19ea3a20cc8d16086805a3f3d26b32"
 
 [[package]]
 name = "sha-1"

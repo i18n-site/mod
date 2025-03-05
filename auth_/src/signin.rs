@@ -17,7 +17,7 @@ pub async fn mail(
   let cookie = set_cookie::new(xtld::host_tld(host));
   let uid = 12;
 
-  set_header.push(SET_COOKIE, cookie.set_max("u", ub64::u64_b64(uid)));
-
+  dbg!(browser);
+  set_header.push(SET_COOKIE, cookie.set_max_for_js("u", ub64::u64_b64(uid)));
   OK
 }
