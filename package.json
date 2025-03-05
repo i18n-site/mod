@@ -1,6 +1,7 @@
 {
   "type": "module",
   "dependencies": {
-    "@3-/mdt": "^0.1.5"
+    "@3-/mdt": "^0.1.5",
+    "hpcmod": "^0.1.3"
   }
 }
