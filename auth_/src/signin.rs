@@ -47,12 +47,14 @@ pub async fn mail(
     .and_then(|value: &str| value.split(',').next().map(str::trim))
     .and_then(|v| v.parse::<IpAddr>().ok());
 
+  let client_version = ua.client.version.unwrap_or_default();
+  let os_version = ua.os.version.unwrap_or_default();
   dbg!(headers);
   dbg!(ip);
   dbg!(ua.client.family);
-  dbg!(ua.client.version);
+  dbg!(client_version);
   dbg!(ua.os.family);
-  dbg!(ua.os.version);
+  dbg!(os_version);
 
   let now = sts::sec() as f64;
   let uid_bin = &intbin::u64_bin(uid)[..];
