@@ -7,26 +7,15 @@ use xkv::{
   fred::interfaces::{KeysInterface, SortedSetsInterface},
 };
 use set_cookie::{MAX, SET_COOKIE};
-use serde::{Deserialize, Serialize};
 use http::{Extensions, HeaderMap};
 use ctx_::SetHeader;
 use cookie_b::Browser;
 use xbin::concat;
-use simple_useragent::UserAgentParser;
 
-use crate::r::{R_BROWSER_META, R_BROWSER_USER, R_USER_BROWSER};
-
-#[static_init::dynamic]
-pub static UA: UserAgentParser = UserAgentParser::new();
-
-#[derive(Deserialize, Serialize, Debug)]
-pub struct BrowserMeta {
-  pub ip: Option<IpAddr>,
-  pub brand: String,
-  pub ver: String,
-  pub os: String,
-  pub os_ver: String,
-}
+use crate::{
+  BrowserMeta, UA,
+  r::{R_BROWSER_META, R_BROWSER_USER, R_USER_BROWSER},
+};
 
 #[iat::captcha]
 pub async fn mail(
