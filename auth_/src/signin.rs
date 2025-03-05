@@ -10,8 +10,7 @@ use ctx_::SetHeader;
 use cookie_b::Browser;
 use xbin::concat;
 
-pub const R_BROWSER: &[u8] = b"B:";
-pub const R_USER_BROWSER: &[u8] = b"B:";
+use crate::r::{R_BROWSER, R_USER_BROWSER};
 
 #[iat::captcha]
 pub async fn mail(
