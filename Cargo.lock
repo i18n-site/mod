@@ -1018,14 +1018,15 @@ dependencies = [
 
 [[package]]
 name = "icall"
-version = "0.1.47"
+version = "0.1.49"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0a8e43afaf7be4287bdc4562e70211cef7481b950b3a6c32b7edf0018c271ce5"
+checksum = "ed01f83819e21db8a6ed5936fc45da454e15e5af712f7d27b95b6cb5fc4b09b4"
 dependencies = [
  "anyhow",
  "lazy_static",
  "pb-jelly",
  "sonic-rs",
+ "xerr",
 ]
 
 [[package]]
