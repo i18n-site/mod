@@ -16,7 +16,7 @@ click_captcha = { version = "0.1.34", features = [
   "verify",
   "webp",
 ] }
-icall = "0.1.52"
+icall = "0.1.53"
 pb-jelly = "0.0.17"
 pc = "0.1.12"
 rand = "0.9.0"

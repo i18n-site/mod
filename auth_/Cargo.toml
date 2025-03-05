@@ -28,7 +28,8 @@ static_init = "1.0.3"
 pc = "0.1.12"
 serde = { version = "1.0.218", features = ["derive"] }
 r_ = "0.1.2"
-icall = "0.1.52"
+icall = "0.1.53"
+xmail = "0.1.15"
 
 [dev-dependencies]
 xboot = "0.1.28"

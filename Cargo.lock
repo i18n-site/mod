@@ -137,6 +137,7 @@ dependencies = [
  "xbin",
  "xboot",
  "xkv",
+ "xmail",
 ]
 
 [[package]]
@@ -1018,9 +1019,9 @@ dependencies = [
 
 [[package]]
 name = "icall"
-version = "0.1.52"
+version = "0.1.53"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bbd3106503da31faab451b00a23ec9cc549349671ccfc010c7914f0f0c5026e4"
+checksum = "384c3485cef7eb5e2718dd7d89f40ee15599393c18f72f66aaafb5ae641821d6"
 dependencies = [
  "anyhow",
  "lazy_static",
@@ -1633,6 +1634,12 @@ dependencies = [
  "quote",
  "syn 2.0.99",
 ]
+
+[[package]]
+name = "punycode"
+version = "0.4.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e9e1dcb320d6839f6edb64f7a4a59d39b30480d4d1765b56873f7c858538a5fe"
 
 [[package]]
 name = "quick-error"
@@ -2976,6 +2983,17 @@ dependencies = [
  "linkme",
  "static_",
  "tracing",
+]
+
+[[package]]
+name = "xmail"
+version = "0.1.15"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2cd21beabb8c52bce0e24cc4f2ebfefa21152fdea7be58877c20f12588f1c3c4"
+dependencies = [
+ "punycode",
+ "xstr",
+ "xtld",
 ]
 
 [[package]]
