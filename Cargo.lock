@@ -1159,9 +1159,9 @@ dependencies = [
 
 [[package]]
 name = "ih"
-version = "0.1.2"
+version = "0.1.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9a806f59477a5b93f4bb2d858783ce530e2058907dab4bf39ddd635632320e02"
+checksum = "43729f3e9b1d762b05ea83f898ac1b0ed8549cdd9887780bd40ff0e39987f2cd"
 dependencies = [
  "anyhow",
  "lazy_static",
