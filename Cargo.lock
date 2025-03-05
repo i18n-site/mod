@@ -124,6 +124,8 @@ dependencies = [
  "iat",
  "icall",
  "intbin 0.1.2",
+ "pc",
+ "serde",
  "set_cookie",
  "simple-useragent",
  "static_init",

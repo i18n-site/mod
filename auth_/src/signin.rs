@@ -7,6 +7,7 @@ use xkv::{
   fred::interfaces::{KeysInterface, SortedSetsInterface},
 };
 use set_cookie::{MAX, SET_COOKIE};
+use serde::{Deserialize, Serialize};
 use http::{Extensions, HeaderMap};
 use ctx_::SetHeader;
 use cookie_b::Browser;
@@ -17,6 +18,15 @@ use crate::r::{R_BROWSER_META, R_BROWSER_USER, R_USER_BROWSER};
 
 #[static_init::dynamic]
 pub static UA: UserAgentParser = UserAgentParser::new();
+
+#[derive(Deserialize, Serialize, Debug)]
+pub struct BrowserMeta {
+  pub ip: Option<IpAddr>,
+  pub brand: String,
+  pub ver: String,
+  pub os: String,
+  pub os_ver: String,
+}
 
 #[iat::captcha]
 pub async fn mail(
@@ -49,12 +59,14 @@ pub async fn mail(
 
   let client_version = ua.client.version.unwrap_or_default();
   let os_version = ua.os.version.unwrap_or_default();
-  dbg!(headers);
-  dbg!(ip);
-  dbg!(ua.client.family);
-  dbg!(client_version);
-  dbg!(ua.os.family);
-  dbg!(os_version);
+
+  let browser_meta = BrowserMeta {
+    ip,
+    brand: ua.client.family,
+    ver: client_version,
+    os: ua.os.family,
+    os_ver: os_version,
+  };
 
   let now = sts::sec() as f64;
   let uid_bin = &intbin::u64_bin(uid)[..];
@@ -65,6 +77,7 @@ pub async fn mail(
   user -> browser 用户在哪些设备上登录
 
   */
+
   let browser_user = concat!(R_BROWSER_USER, browser.bin);
   let p = R.pipeline();
   let _: () = p
@@ -81,6 +94,17 @@ pub async fn mail(
       (now, &browser.bin[..]),
     )
     .await?;
+
+  let _: () = p
+    .set(
+      concat!(R_BROWSER_META, browser.bin),
+      pc::e(browser_meta)?,
+      None,
+      None,
+      false,
+    )
+    .await?;
+
   let _: () = p.last().await?;
   set_header.push(SET_COOKIE, cookie.set_max_for_js("u", ub64::u64_b64(uid)));
   OK
