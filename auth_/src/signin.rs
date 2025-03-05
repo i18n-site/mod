@@ -13,7 +13,7 @@ use cookie_b::Browser;
 use xbin::concat;
 use simple_useragent::UserAgentParser;
 
-use crate::r::{R_BROWSER, R_USER_BROWSER};
+use crate::r::{R_BROWSER_META, R_BROWSER_USER, R_USER_BROWSER};
 
 #[static_init::dynamic]
 pub static UA: UserAgentParser = UserAgentParser::new();
@@ -58,7 +58,6 @@ pub async fn mail(
 
   let now = sts::sec() as f64;
   let uid_bin = &intbin::u64_bin(uid)[..];
-  let key = concat!(R_BROWSER, browser.bin);
 
   /*
 
@@ -66,11 +65,12 @@ pub async fn mail(
   user -> browser 用户在哪些设备上登录
 
   */
+  let browser_user = concat!(R_BROWSER_USER, browser.bin);
   let p = R.pipeline();
   let _: () = p
-    .zadd(key, None, None, false, false, (now, uid_bin))
+    .zadd(browser_user, None, None, false, false, (now, uid_bin))
     .await?;
-  let _: () = p.expire(key, MAX as _, None).await?;
+  let _: () = p.expire(browser_user, MAX as _, None).await?;
   let _: () = p
     .zadd(
       concat!(R_USER_BROWSER, uid_bin),
@@ -82,7 +82,6 @@ pub async fn mail(
     )
     .await?;
   let _: () = p.last().await?;
-
   set_header.push(SET_COOKIE, cookie.set_max_for_js("u", ub64::u64_b64(uid)));
   OK
 }
