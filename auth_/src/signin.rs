@@ -39,6 +39,13 @@ pub async fn mail(
       .unwrap_or_default(),
   );
 
+  dbg!(headers);
+  let ip = headers
+    .get("x-forwarded-for")
+    .and_then(|v| v.to_str().ok())
+    .unwrap_or_default();
+
+  dbg!(ip);
   dbg!(ua.client.family);
   dbg!(ua.client.version);
   dbg!(ua.os.family);
@@ -69,8 +76,6 @@ pub async fn mail(
       (now, &browser.bin[..]),
     )
     .await?;
-
-  dbg!(headers);
   let _: () = p.last().await?;
 
   set_header.push(SET_COOKIE, cookie.set_max_for_js("u", ub64::u64_b64(uid)));
