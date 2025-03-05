@@ -126,6 +126,7 @@ dependencies = [
  "intbin 0.1.2",
  "set_cookie",
  "simple-useragent",
+ "static_init",
  "sts",
  "tokio",
  "tracing",

@@ -9,8 +9,12 @@ use http::{Extensions, HeaderMap};
 use ctx_::SetHeader;
 use cookie_b::Browser;
 use xbin::concat;
+use simple_useragent::UserAgentParser;
 
 use crate::r::{R_BROWSER, R_USER_BROWSER};
+
+#[static_init::dynamic]
+pub static UA: UserAgentParser = UserAgentParser::new();
 
 #[iat::captcha]
 pub async fn mail(
