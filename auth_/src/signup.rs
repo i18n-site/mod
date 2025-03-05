@@ -16,8 +16,13 @@ pub async fn mail(address: &str, password: &str, headers: &HeaderMap) -> Void {
   let host = header_host::tld(headers)?;
   let host_id: u64 = R.fcall(r_::ZSET_ID, &["hostId"], &[host]).await?;
 
+  let err = icall::json();
   // 验证邮箱格式是否有效
+
   // 验证密码长度是否满足要求（最少6个字符）
+  // err.set("password", err::password::TOO_SHORT);
+
+  err.end()?;
 
   dbg!((host, host_id));
   OK

@@ -122,6 +122,7 @@ dependencies = [
  "header_host",
  "http",
  "iat",
+ "icall",
  "intbin 0.1.2",
  "pc",
  "r_",
