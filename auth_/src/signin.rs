@@ -1,6 +1,5 @@
 use std::net::IpAddr;
 
-use header_host::header_host;
 use aok::{OK, Result};
 use xkv::{
   R,
@@ -29,8 +28,8 @@ pub async fn mail(
     根据域名id，邮箱确认用户，不同网站可以复用一套后台
   */
 
-  let host = header_host(headers)?;
-  let cookie = set_cookie::new(xtld::host_tld(host));
+  let host = header_host::host(headers)?;
+  let cookie = set_cookie::new(host);
   let uid = 12;
 
   let ua = UA.parse(

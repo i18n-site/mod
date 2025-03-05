@@ -408,9 +408,9 @@ checksum = "396de984970346b0d9e93d1415082923c679e5ae5c3ee3dcbd104f5610af126b"
 
 [[package]]
 name = "cookie_b"
-version = "0.1.16"
+version = "0.1.19"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7e1c8b7b1e9429481e0b1dbf3715384b50a652a1f76b20f65e8442034f5d92ea"
+checksum = "395976cc18c9953762f43be18c5b860f3371baf422315bb05f511e338dff790b"
 dependencies = [
  "axum",
  "header_host",
@@ -419,7 +419,6 @@ dependencies = [
  "tower",
  "ub64",
  "xerr",
- "xtld",
 ]
 
 [[package]]
@@ -479,9 +478,9 @@ dependencies = [
 
 [[package]]
 name = "ctx_"
-version = "0.1.4"
+version = "0.1.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a1bdabb626518cc6335124bf93ab72b4a2598f4b6ca73061defeaf76913dc08d"
+checksum = "db8f366831e57d5e8af75c5fe9cf472242773e8ec7f3017cb7b09cef398f3194"
 dependencies = [
  "aok",
  "append-only-vec",
@@ -885,12 +884,13 @@ checksum = "bf151400ff0baff5465007dd2f3e717f3fe502074ca563069ce3a6629d07b289"
 
 [[package]]
 name = "header_host"
-version = "0.1.1"
+version = "0.1.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d30f015ad4c82729444c20c34ddd4d65d856b2a6c349337e11649ea18026f1df"
+checksum = "8bc12efa60329ce95b8c53537d0c0ff172b2bcfc435148220ee5d739dbcfe8b6"
 dependencies = [
  "aok",
  "http",
+ "xtld",
 ]
 
 [[package]]
@@ -2047,9 +2047,9 @@ dependencies = [
 
 [[package]]
 name = "set_cookie"
-version = "0.1.6"
+version = "0.1.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "61614391a9cc9af4de4e2e8c34b4164c4c19ea3a20cc8d16086805a3f3d26b32"
+checksum = "bd77c8385dd8ad5764364b894eb117ffad2089e511e35990bccf3f4199c9d76d"
 
 [[package]]
 name = "sha-1"
@@ -2985,9 +2985,9 @@ checksum = "74ead2b97cf303e2522b08925e90330d75feaaec7d07ac8aa16fbf60728da1b2"
 
 [[package]]
 name = "xtld"
-version = "0.1.5"
+version = "0.1.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8a949ffc9508ca375b09361287c6ab81fd723b60a00add2eafa603be3c90defa"
+checksum = "0a93652ca54819a3d0d5b1546a735295955c4f34f6446e827ee7963c48b5bf98"
 dependencies = [
  "psl",
  "xstr",

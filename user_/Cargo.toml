@@ -10,7 +10,7 @@ keywords = ["hpc", "mod"]
 
 [dependencies]
 aok = "0.1.17"
-ctx_ = { version = "0.1.4", features = ["user"] }
+ctx_ = { version = "0.1.6", features = ["user"] }
 tracing = "0.1.41"
 
 [dev-dependencies]
