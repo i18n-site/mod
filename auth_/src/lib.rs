@@ -1,5 +1,6 @@
 mod r;
 
+pub mod err;
 pub mod signin;
 pub mod signup;
 

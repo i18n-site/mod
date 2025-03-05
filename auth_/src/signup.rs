@@ -10,6 +10,8 @@ use xkv::{R, fred::interfaces::FunctionInterface};
 use http::HeaderMap;
 use aok::{OK, Result, Void};
 
+use crate::err;
+
 /// 发送注册的激活邮件
 #[iat::captcha]
 pub async fn mail(address: &str, password: &str, headers: &HeaderMap) -> Void {
@@ -20,7 +22,7 @@ pub async fn mail(address: &str, password: &str, headers: &HeaderMap) -> Void {
   // 验证邮箱格式是否有效
 
   // 验证密码长度是否满足要求（最少6个字符）
-  // err.set("password", err::password::TOO_SHORT);
+  err.set("password", err::password::TOO_SHORT);
 
   err.end()?;
 

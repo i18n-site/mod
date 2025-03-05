@@ -15,7 +15,7 @@ all-features = true
 aok = "0.1.17"
 http = "1.2.0"
 iat = { version = "0.1.2" }
-icall = "0.1.46"
+icall = "0.1.47"
 tracing = "0.1.41"
 
 [dev-dependencies]

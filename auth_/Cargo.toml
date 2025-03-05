@@ -12,7 +12,7 @@ keywords = ["hpc", "mod"]
 aok = "0.1.17"
 http = "1.2.0"
 iat = { version = "0.1.2" }
-ctx_ = { version = "0.1.6", features = ["set_header"] }
+ctx_ = { version = "0.1.7", features = ["set_header"] }
 tracing = "0.1.41"
 header_host = "0.1.5"
 set_cookie = "0.1.7"
@@ -28,7 +28,7 @@ static_init = "1.0.3"
 pc = "0.1.12"
 serde = { version = "1.0.218", features = ["derive"] }
 r_ = "0.1.2"
-icall = "0.1.46"
+icall = "0.1.47"
 
 [dev-dependencies]
 xboot = "0.1.28"
