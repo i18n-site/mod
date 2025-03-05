@@ -1,3 +1,5 @@
+use std::net::IpAddr;
+
 use header_host::header_host;
 use aok::{OK, Result};
 use xkv::{
@@ -39,12 +41,13 @@ pub async fn mail(
       .unwrap_or_default(),
   );
 
-  dbg!(headers);
   let ip = headers
     .get("x-forwarded-for")
     .and_then(|v| v.to_str().ok())
-    .unwrap_or_default();
+    .and_then(|value: &str| value.split(',').next().map(str::trim))
+    .and_then(|v| v.parse::<IpAddr>().ok());
 
+  dbg!(headers);
   dbg!(ip);
   dbg!(ua.client.family);
   dbg!(ua.client.version);
