@@ -32,10 +32,20 @@ pub async fn mail(
   let cookie = set_cookie::new(xtld::host_tld(host));
   let uid = 12;
 
+  let ua = UA.parse(
+    headers
+      .get("user-agent")
+      .and_then(|v| v.to_str().ok())
+      .unwrap_or_default(),
+  );
+
+  dbg!(ua.client.family);
+  dbg!(ua.client.version);
+  dbg!(ua.os.family);
+  dbg!(ua.os.version);
+
   let now = sts::sec() as f64;
-
   let uid_bin = &intbin::u64_bin(uid)[..];
-
   let key = concat!(R_BROWSER, browser.bin);
 
   /*
