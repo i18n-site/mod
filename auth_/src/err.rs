@@ -3,6 +3,7 @@ pub mod password {
   pub const TOO_SHORT: u64 = 1;
 }
 pub mod address {
+  pub const INVALID_MAIL: u64 = 3;
   pub const EXIST: u64 = 1;
   pub const DISABLE_TEMPMAIL: u64 = 2;
 }

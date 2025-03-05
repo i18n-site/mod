@@ -3,3 +3,4 @@ password:
 address:
   exist: 1
   disable_tempmail: 2
+  invalid_mail: 3
