@@ -10,7 +10,17 @@ use xkv::{R, fred::interfaces::FunctionInterface};
 use http::HeaderMap;
 use aok::{OK, Result, Void};
 
-use crate::err;
+#[macro_export]
+macro_rules! json_err {
+  () => {
+    let mut err = ih::json();
+    macro_rules! err {
+      ($mod:ident $code:ident) => {
+        err(stringify!($mod), crate::err::$mod::$code);
+      };
+    }
+  };
+}
 
 /// 发送注册的激活邮件
 #[iat::captcha]
@@ -18,15 +28,16 @@ pub async fn mail(address: &str, password: &str, headers: &HeaderMap) -> Void {
   let host = header_host::tld(headers)?;
   let host_id: u64 = R.fcall(r_::ZSET_ID, &["hostId"], &[host]).await?;
 
-  let mut err = ih::json();
+  json_err!();
 
   let (mail, mail_tld) = xmail::norm_tld(address);
-  if (!mail_tld.contains('.') || mail_tld.starts_with('.')) {
-    err("address", err::address::INVALID_MAIL);
+
+  if !mail_tld.contains('.') || mail_tld.starts_with('.') {
+    err!(address INVALID_MAIL);
   }
 
   if password.len() < 6 {
-    err("password", err::password::TOO_SHORT);
+    err!(password TOO_SHORT);
   }
 
   err()?;
