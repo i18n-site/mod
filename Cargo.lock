@@ -122,9 +122,9 @@ dependencies = [
  "header_host",
  "http",
  "iat",
- "icall",
  "intbin 0.1.2",
  "pc",
+ "r_",
  "serde",
  "set_cookie",
  "simple-useragent",
@@ -136,7 +136,6 @@ dependencies = [
  "xbin",
  "xboot",
  "xkv",
- "xtld",
 ]
 
 [[package]]
@@ -1647,6 +1646,12 @@ checksum = "c1f1914ce909e1658d9907913b4b91947430c7d9be598b15a1912935b8c04801"
 dependencies = [
  "proc-macro2",
 ]
+
+[[package]]
+name = "r_"
+version = "0.1.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "3650b720c31895d50f83832dfd0e2295ea525df7b539bd71befe27a78e9746dc"
 
 [[package]]
 name = "rancor"
