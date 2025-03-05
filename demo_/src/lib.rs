@@ -12,5 +12,5 @@ pub async fn manual_captcha(headers: &HeaderMap) -> Void {
     dbg!(c);
     return OK;
   }
-  icall::captcha()
+  ih::captcha()
 }
