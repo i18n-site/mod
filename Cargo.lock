@@ -1018,9 +1018,9 @@ dependencies = [
 
 [[package]]
 name = "icall"
-version = "0.1.49"
+version = "0.1.52"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ed01f83819e21db8a6ed5936fc45da454e15e5af712f7d27b95b6cb5fc4b09b4"
+checksum = "bbd3106503da31faab451b00a23ec9cc549349671ccfc010c7914f0f0c5026e4"
 dependencies = [
  "anyhow",
  "lazy_static",

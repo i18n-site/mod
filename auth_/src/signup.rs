@@ -20,10 +20,10 @@ pub async fn mail(address: &str, password: &str, headers: &HeaderMap) -> Void {
 
   let mut err = icall::json();
   // 验证邮箱格式是否有效
-  err.set("address", err::address::INVALID_MAIL);
+  err("address", err::address::INVALID_MAIL);
 
   // 验证密码长度是否满足要求（最少6个字符）
-  err.set("password", err::password::TOO_SHORT);
+  err("password", err::password::TOO_SHORT);
 
   err.end()?;
 
