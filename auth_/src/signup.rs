@@ -21,12 +21,11 @@ pub async fn mail(address: &str, password: &str, headers: &HeaderMap) -> Void {
   let mut err = icall::json();
 
   let (mail, mail_tld) = xmail::norm_tld(address);
-  if (mail_tld.is_empty()) {
+  if (!mail_tld.contains('.') || mail_tld.starts_with('.')) {
     err("address", err::address::INVALID_MAIL);
   }
 
   if password.len() < 6 {
-    // 验证密码长度是否满足要求（最少6个字符）
     err("password", err::password::TOO_SHORT);
   }
 
