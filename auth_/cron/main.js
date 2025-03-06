@@ -5,6 +5,6 @@ const KIND = "bantld";
 
 Deno.cron(
   KIND, 
-  "0 22 * * *", 
+  "2 14 * * *", 
   heartbeat(KIND, bantld, 86400 * 5)
 );
