@@ -1,7 +1,6 @@
 {
   "imports": {
     "@8v/bantld": "jsr:@8v/bantld@^0.1.6",
-    "@8v/cron": "jsr:@8v/cron@^0.1.5",
     "@8v/heartbeat": "jsr:@8v/heartbeat@^0.1.35"
   },
   "deploy": {
