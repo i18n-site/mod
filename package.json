@@ -2,6 +2,7 @@
   "type": "module",
   "dependencies": {
     "@3-/coffee_plus": "^0.1.26",
+    "@3-/envexpand": "^0.1.8",
     "@3-/mdt": "^0.1.5",
     "coffeescript": "^2.7.0",
     "hpcmod": "^0.1.5"

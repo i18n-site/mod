@@ -2,7 +2,9 @@
 
 DIR=$(realpath $0) && DIR=${DIR%/*}
 cd $DIR
-../../../srv/sh/cronEnv.sh
+
+bun x envexpand ../../../conf/srv/r.env ../../../conf/srv/cron/_pg.env >/tmp/authCron.env
+deno=$(which deno)
 set -ex
 
-env - $(which deno) run --env-file=/tmp/srv_cron.env --unstable-cron -A main.js
+env - $deno run --env-file=/tmp/authCron.env --unstable-cron -A main.js
