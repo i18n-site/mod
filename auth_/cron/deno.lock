@@ -1,7 +1,7 @@
 {
   "version": "4",
   "specifiers": {
-    "jsr:@8v/bantld@~0.1.5": "0.1.5",
+    "jsr:@8v/bantld@~0.1.6": "0.1.6",
     "jsr:@8v/cron@~0.1.5": "0.1.5",
     "jsr:@8v/curl@~0.1.6": "0.1.7",
     "jsr:@8v/curl@~0.1.7": "0.1.7",
@@ -20,12 +20,10 @@
     "npm:tldts@^6.1.82": "6.1.83"
   },
   "jsr": {
-    "@8v/bantld@0.1.5": {
-      "integrity": "934615d12a7e5bacb4560f7dff751f00162caa160e2f78a8b99eb2afe8105e34",
+    "@8v/bantld@0.1.6": {
+      "integrity": "822bf7f718be1d91f6f0b7edf9db7f03147ca5e03c7a845769c4f3296ed191da",
       "dependencies": [
-        "jsr:@8v/cron",
         "jsr:@8v/curl@~0.1.7",
-        "jsr:@8v/heartbeat",
         "jsr:@8v/redis",
         "jsr:@8v/tld",
         "npm:punycode"
@@ -154,7 +152,9 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@8v/bantld@~0.1.5"
+      "jsr:@8v/bantld@~0.1.6",
+      "jsr:@8v/cron@~0.1.5",
+      "jsr:@8v/heartbeat@~0.1.35"
     ]
   }
 }
