@@ -1,4 +1,6 @@
-#!/usr/bin/env deno
+#!/usr/bin/env -S deno run -A
 
-console.log(1)
+import curl from "@8v/curl";
 
+const URL_FAKEFILTER = 'https://raw.githubusercontent.com/7c/fakefilter/main/json/data.json'
+console.log(await curl(URL_FAKEFILTER))

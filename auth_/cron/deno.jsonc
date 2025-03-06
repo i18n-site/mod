@@ -1,5 +1,8 @@
 {
   "name": "@8v/bantld",
   "exports": "./mod.js",
-  "license": "MulanPSL-2.0"
+  "license": "MulanPSL-2.0",
+  "imports": {
+    "@8v/curl": "jsr:@8v/curl@^0.1.6"
+  }
 }
