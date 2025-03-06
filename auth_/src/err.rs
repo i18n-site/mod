@@ -7,3 +7,10 @@ pub mod address {
   pub const EXIST: u64 = 1;
   pub const DISABLE_TEMPMAIL: u64 = 2;
 }
+
+#[macro_export]
+macro_rules! err_json {
+  () => {
+    ih::err_json!(crate);
+  };
+}

@@ -16,7 +16,7 @@ pub async fn mail(address: &str, password: &str, headers: &HeaderMap) -> Void {
   let host = header_host::tld(headers)?;
   let host_id: u64 = R.fcall(r_::ZSET_ID, &["hostId"], &[host]).await?;
 
-  ih::json_err!(crate);
+  crate::err_json!();
 
   let (mail, mail_tld) = xmail::norm_tld(address);
 
