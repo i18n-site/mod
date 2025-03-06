@@ -1,7 +1,7 @@
 {
   "version": "4",
   "specifiers": {
-    "jsr:@8v/bantld@~0.1.1": "0.1.1",
+    "jsr:@8v/bantld@~0.1.2": "0.1.2",
     "jsr:@8v/cron@~0.1.5": "0.1.5",
     "jsr:@8v/curl@~0.1.6": "0.1.7",
     "jsr:@8v/curl@~0.1.7": "0.1.7",
@@ -12,14 +12,14 @@
     "jsr:@8v/pg@~0.1.3": "0.1.3",
     "jsr:@8v/tld@~0.1.2": "0.1.2",
     "jsr:@y0/postgres@^3.4.5": "3.4.5",
-    "npm:@3-/redis@~0.1.11": "0.1.11_@3-+split@0.1.4_ioredis@5.5.0",
-    "npm:ansis@^3.12.0": "3.15.0",
+    "npm:@3-/redis@~0.1.13": "0.1.13_@3-+split@0.1.4_ioredis@5.6.0",
+    "npm:ansis@^3.12.0": "3.17.0",
     "npm:punycode@^2.3.1": "2.3.1",
-    "npm:tldts@^6.1.82": "6.1.82"
+    "npm:tldts@^6.1.82": "6.1.83"
   },
   "jsr": {
-    "@8v/bantld@0.1.1": {
-      "integrity": "bd1562c081d4f24ff9122c0e00830038569adfaac05f0d24bc520046bc296b9a",
+    "@8v/bantld@0.1.2": {
+      "integrity": "38110d849c54b29e1cc77e5c495f1cef29ed49a7499a42f83433638ce10f14a9",
       "dependencies": [
         "jsr:@8v/cron",
         "jsr:@8v/curl@~0.1.7",
@@ -74,8 +74,8 @@
     }
   },
   "npm": {
-    "@3-/redis@0.1.11_@3-+split@0.1.4_ioredis@5.5.0": {
-      "integrity": "sha512-MEvNvZYrhyKd8JpGd2GQ/Y/Kaj03VBhAxhl42QeL96ha/N5n9GAdlm0HpFQkyn8x77xYRsvCDT38S385BaoowA==",
+    "@3-/redis@0.1.13_@3-+split@0.1.4_ioredis@5.6.0": {
+      "integrity": "sha512-glWQz6YuBYz78hZZsBq6X1dcoF9k7Y3rz31YB5EVdnHSvOOl/EbavckM0xbSWPbuCKS6Zx1NOTJjlgGTOuClQg==",
       "dependencies": [
         "@3-/split",
         "ioredis"
@@ -87,8 +87,8 @@
     "@ioredis/commands@1.2.0": {
       "integrity": "sha512-Sx1pU8EM64o2BrqNpEO1CNLtKQwyhuXuqyfH7oGKCk+1a33d2r5saW8zNwm3j6BTExtjrv2BxTgzzkMwts6vGg=="
     },
-    "ansis@3.15.0": {
-      "integrity": "sha512-zIcWDJ+Kwqxfdnogx66Gxzr0kVmCcRAdat9nlY2IHsshqTN4fBH6tMeRMPA/2w0rpBayIJvjQAaa2/4RDrNqwg=="
+    "ansis@3.17.0": {
+      "integrity": "sha512-0qWUglt9JEqLFr3w1I1pbrChn1grhaiAR2ocX1PP/flRmxgtwTzPFFFnfIlD6aMOLQZgSuCRlidD70lvx8yhzg=="
     },
     "cluster-key-slot@1.1.2": {
       "integrity": "sha512-RMr0FhtfXemyinomL4hrWcYJxmX6deFdCxpJzhDttxgO1+bcCnkk+9drydLVDmAMG7NE6aN/fl4F7ucU/90gAA=="
@@ -102,8 +102,8 @@
     "denque@2.1.0": {
       "integrity": "sha512-HVQE3AAb/pxF8fQAoiqpvg9i3evqug3hoiwakOyZAwJm+6vZehbkYXZ0l4JxS+I3QxM97v5aaRNhj8v5oBhekw=="
     },
-    "ioredis@5.5.0": {
-      "integrity": "sha512-7CutT89g23FfSa8MDoIFs2GYYa0PaNiW/OrT+nRyjRXHDZd17HmIgy+reOQ/yhh72NznNjGuS8kbCAcA4Ro4mw==",
+    "ioredis@5.6.0": {
+      "integrity": "sha512-tBZlIIWbndeWBWCXWZiqtOF/yxf6yZX3tAlTJ7nfo5jhd6dctNxF7QnYlZLZ1a0o0pDoen7CgZqO+zjNaFbJAg==",
       "dependencies": [
         "@ioredis/commands",
         "cluster-key-slot",
@@ -140,11 +140,11 @@
     "standard-as-callback@2.1.0": {
       "integrity": "sha512-qoRRSyROncaz1z0mvYqIE4lCd9p2R90i6GxW3uZv5ucSu8tU7B5HXUP1gG8pVZsYNVaXjk8ClXHPttLyxAL48A=="
     },
-    "tldts-core@6.1.82": {
-      "integrity": "sha512-Jabl32m21tt/d/PbDO88R43F8aY98Piiz6BVH9ShUlOAiiAELhEqwrAmBocjAqnCfoUeIsRU+h3IEzZd318F3w=="
+    "tldts-core@6.1.83": {
+      "integrity": "sha512-I2wb9OJc6rXyh9d4aInhSNWChNI+ra6qDnFEGEwe9OoA68lE4Temw29bOkf1Uvwt8VZS079t1BFZdXVBmmB4dw=="
     },
-    "tldts@6.1.82": {
-      "integrity": "sha512-KCTjNL9F7j8MzxgfTgjT+v21oYH38OidFty7dH00maWANAI2IsLw2AnThtTJi9HKALHZKQQWnNebYheadacD+g==",
+    "tldts@6.1.83": {
+      "integrity": "sha512-FHxxNJJ0WNsEBPHyC1oesQb3rRoxpuho/z2g3zIIAhw1WHJeQsUzK1jYK8TI1/iClaa4fS3Z2TCA9mtxXsENSg==",
       "dependencies": [
         "tldts-core"
       ]
@@ -152,7 +152,7 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@8v/bantld@~0.1.1"
+      "jsr:@8v/bantld@~0.1.2"
     ]
   }
 }
