@@ -2,7 +2,7 @@
   "version": "4",
   "specifiers": {
     "jsr:@8v/bantld@~0.1.6": "0.1.6",
-    "jsr:@8v/cron@~0.1.5": "0.1.5",
+    "jsr:@8v/cron@~0.1.7": "0.1.7",
     "jsr:@8v/curl@~0.1.6": "0.1.7",
     "jsr:@8v/curl@~0.1.7": "0.1.7",
     "jsr:@8v/heartbeat@~0.1.35": "0.1.35",
@@ -29,8 +29,8 @@
         "npm:punycode"
       ]
     },
-    "@8v/cron@0.1.5": {
-      "integrity": "9435a43e100b7242d2d7742f3326e319c833a61f1846ee77d443663c56fc0a2f"
+    "@8v/cron@0.1.7": {
+      "integrity": "b6d8353a9b9ea0a4850e22abfc756805652ae69b13bb4eced791735a4bd26e69"
     },
     "@8v/curl@0.1.7": {
       "integrity": "dde8d0e0f2e978b5431167800d14af18f3b088b36b7fd86ed99848a155b058b4"
@@ -153,7 +153,7 @@
   "workspace": {
     "dependencies": [
       "jsr:@8v/bantld@~0.1.6",
-      "jsr:@8v/cron@~0.1.5",
+      "jsr:@8v/cron@~0.1.7",
       "jsr:@8v/heartbeat@~0.1.35"
     ]
   }
