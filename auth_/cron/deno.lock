@@ -2,7 +2,8 @@
   "version": "4",
   "specifiers": {
     "jsr:@8v/bantld@~0.1.6": "0.1.6",
-    "jsr:@8v/cron@~0.1.7": "0.1.7",
+    "jsr:@8v/cron-once@*": "0.1.2",
+    "jsr:@8v/cron-once@0.1.2": "0.1.2",
     "jsr:@8v/curl@~0.1.6": "0.1.7",
     "jsr:@8v/curl@~0.1.7": "0.1.7",
     "jsr:@8v/heartbeat@~0.1.35": "0.1.35",
@@ -29,8 +30,8 @@
         "npm:punycode"
       ]
     },
-    "@8v/cron@0.1.7": {
-      "integrity": "b6d8353a9b9ea0a4850e22abfc756805652ae69b13bb4eced791735a4bd26e69"
+    "@8v/cron-once@0.1.2": {
+      "integrity": "b405940990e4fee0a9cc0c2e4f06827fffc5fd695b0962709f47e0e288e532f0"
     },
     "@8v/curl@0.1.7": {
       "integrity": "dde8d0e0f2e978b5431167800d14af18f3b088b36b7fd86ed99848a155b058b4"

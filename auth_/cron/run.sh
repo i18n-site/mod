@@ -11,4 +11,5 @@ bun x envexpand \
 deno=$(which deno)
 set -ex
 
-env - $deno run --env-file=/tmp/authCron.env --unstable-cron -A once.js
+env - $deno eval --env-file=/tmp/authCron.env --unstable-cron \
+  "import cron_once from 'jsr:@8v/cron-once';await cron_once(import('./main.js'));"
