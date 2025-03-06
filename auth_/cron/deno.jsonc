@@ -1,0 +1,5 @@
+{
+  "name": "@8v/bantld",
+  "exports": "./mod.js",
+  "license": "MulanPSL-2.0"
+}
