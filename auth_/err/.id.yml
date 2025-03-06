@@ -1,6 +1,6 @@
 password:
   too_short: 1
 address:
-  exist: 1
-  disable_tempmail: 2
-  invalid_mail: 3
+  invalid_mail: 2
+  exist: 3
+  disable_tempmail: 4

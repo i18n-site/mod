@@ -36,7 +36,7 @@ pub async fn verify(id: &[u8], click_pos_li: &[u32]) -> Result<String> {
 
   let captcha = captcha().await?;
 
-  ih::bin(
+  ih::err::bin(
     ih::Captcha {
       id: captcha.id,
       img: captcha.img,
