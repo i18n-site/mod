@@ -8,7 +8,10 @@
 
 use aok::{OK, Result, Void};
 use http::HeaderMap;
-use xkv::{R, fred::interfaces::FunctionInterface};
+use xkv::{
+  R,
+  fred::{interfaces::FunctionInterface, prelude::SetsInterface},
+};
 
 /// 发送注册的激活邮件
 #[iat::captcha]
@@ -22,6 +25,8 @@ pub async fn mail(address: &str, password: &str, headers: &HeaderMap) -> Void {
 
   if !mail_tld.contains('.') || mail_tld.starts_with('.') || mail.starts_with("@") {
     err!(address INVALID_MAIL);
+  } else if R.sismember("bantld", mail_tld).await? {
+    err!(address DISABLE_TEMPMAIL);
   }
 
   if password.len() < 6 {
