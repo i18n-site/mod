@@ -7,4 +7,4 @@ bun x envexpand ../../../conf/srv/r.env ../../../conf/srv/cron/_pg.env >/tmp/aut
 deno=$(which deno)
 set -ex
 
-env - $deno run --env-file=/tmp/authCron.env --unstable-cron -A main.js
+env - $deno run --env-file=/tmp/authCron.env --unstable-cron -A once.js
