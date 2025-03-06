@@ -4,7 +4,10 @@
   },
   "deploy": {
     "project": "cron-auth",
-    "entrypoint": "main.js"
+    "entrypoint": "main.js",
+    "exclude": [
+      "**/node_modules"
+    ]
   },
   "lint": {
     "rules": {
