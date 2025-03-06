@@ -1,6 +1,6 @@
 {
   "imports": {
-    "@8v/bantld": "jsr:@8v/bantld@^0.1.4"
+    "@8v/bantld": "jsr:@8v/bantld@^0.1.5"
   },
   "deploy": {
     // "project": "helloworld",
