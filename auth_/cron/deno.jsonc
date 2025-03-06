@@ -1,0 +1,17 @@
+{
+  "imports": {
+    "@8v/bantld": "jsr:@8v/bantld@^0.1.1"
+  },
+  "deploy": {
+    "project": "cron-auth",
+    "entrypoint": "main.js"
+  },
+  "lint": {
+    "rules": {
+      "exclude": [
+        "no-slow-types",
+        "no-ex-assign"
+      ]
+    }
+  }
+}
