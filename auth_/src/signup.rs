@@ -6,9 +6,9 @@
 //! 每个用户 ID 会有一个状态，表示是冻结还是可用
 //! 不同的站点有不同的 site id 和 browser id 一起编码到请求头
 
-use xkv::{R, fred::interfaces::FunctionInterface};
-use http::HeaderMap;
 use aok::{OK, Result, Void};
+use http::HeaderMap;
+use xkv::{R, fred::interfaces::FunctionInterface};
 
 /// 发送注册的激活邮件
 #[iat::captcha]
@@ -20,7 +20,7 @@ pub async fn mail(address: &str, password: &str, headers: &HeaderMap) -> Void {
 
   let (mail, mail_tld) = xmail::norm_tld(address);
 
-  if !mail_tld.contains('.') || mail_tld.starts_with('.') {
+  if !mail_tld.contains('.') || mail_tld.starts_with('.') || mail.starts_with("@") {
     err!(address INVALID_MAIL);
   }
 

@@ -16,3 +16,4 @@ pub mod address {
   pub const EXIST: u32 = 3;
   pub const DISABLE_TEMPMAIL: u32 = 4;
 }
+
