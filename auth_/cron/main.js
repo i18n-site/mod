@@ -1,5 +1,3 @@
-import {env} from "node:process"
+import '@8v/bantld'
 
-Deno.serve((_req) => new Response('env '+JSON.stringify(env.R_SENTINEL_NAME)));
-
-// await import('@8v/bantld')
+Deno.serve((_req) => new Response('running'));
