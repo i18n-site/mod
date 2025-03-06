@@ -1,7 +1,7 @@
 {
   "version": "4",
   "specifiers": {
-    "jsr:@8v/bantld@~0.1.3": "0.1.3",
+    "jsr:@8v/bantld@~0.1.4": "0.1.4",
     "jsr:@8v/cron@~0.1.5": "0.1.5",
     "jsr:@8v/curl@~0.1.6": "0.1.7",
     "jsr:@8v/curl@~0.1.7": "0.1.7",
@@ -10,22 +10,24 @@
     "jsr:@8v/kind-name@~0.1.2": "0.1.2",
     "jsr:@8v/notify@~0.1.3": "0.1.3",
     "jsr:@8v/pg@~0.1.3": "0.1.3",
+    "jsr:@8v/redis@~0.1.13": "0.1.13",
     "jsr:@8v/tld@~0.1.2": "0.1.2",
     "jsr:@y0/postgres@^3.4.5": "3.4.5",
-    "npm:@3-/redis@~0.1.13": "0.1.13_@3-+split@0.1.4_ioredis@5.6.0",
+    "npm:@3-/split@~0.1.4": "0.1.4",
     "npm:ansis@^3.12.0": "3.17.0",
+    "npm:ioredis@^5.6.0": "5.6.0",
     "npm:punycode@^2.3.1": "2.3.1",
     "npm:tldts@^6.1.82": "6.1.83"
   },
   "jsr": {
-    "@8v/bantld@0.1.3": {
-      "integrity": "87eb6ea0201449f19c86a289662a902781a5f35fbaa75f1852c8c35b9f42eb90",
+    "@8v/bantld@0.1.4": {
+      "integrity": "26c4bc5ff38514f6abb794c8c6938c76ef59f2ba750f718efb8a38b2317621ad",
       "dependencies": [
         "jsr:@8v/cron",
         "jsr:@8v/curl@~0.1.7",
         "jsr:@8v/heartbeat",
+        "jsr:@8v/redis",
         "jsr:@8v/tld",
-        "npm:@3-/redis",
         "npm:punycode"
       ]
     },
@@ -63,6 +65,13 @@
         "npm:ansis"
       ]
     },
+    "@8v/redis@0.1.13": {
+      "integrity": "de7a3bffda6fa366400237ae78236ef664284d939e4b5cfb73ebcaef739cc77f",
+      "dependencies": [
+        "npm:@3-/split",
+        "npm:ioredis"
+      ]
+    },
     "@8v/tld@0.1.2": {
       "integrity": "0e2d54cd8a5d4c6e92502889538581c059d4bf0952f430b3d8b32f18c537d88e",
       "dependencies": [
@@ -74,13 +83,6 @@
     }
   },
   "npm": {
-    "@3-/redis@0.1.13_@3-+split@0.1.4_ioredis@5.6.0": {
-      "integrity": "sha512-glWQz6YuBYz78hZZsBq6X1dcoF9k7Y3rz31YB5EVdnHSvOOl/EbavckM0xbSWPbuCKS6Zx1NOTJjlgGTOuClQg==",
-      "dependencies": [
-        "@3-/split",
-        "ioredis"
-      ]
-    },
     "@3-/split@0.1.4": {
       "integrity": "sha512-XtCF6n8LsKVxatmSVaxPhXg8fPjmD+Fs1aZII6u23YUhkhGkw97wu3k1QFVWMdEEePlbnM8WrFsKhp5Lj02r8g=="
     },
@@ -152,7 +154,7 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@8v/bantld@~0.1.3"
+      "jsr:@8v/bantld@~0.1.4"
     ]
   }
 }
