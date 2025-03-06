@@ -1,0 +1,29 @@
+{
+  "version": "4",
+  "specifiers": {
+    "jsr:@8v/curl@~0.1.7": "0.1.7",
+    "npm:tldts@^6.1.82": "6.1.82"
+  },
+  "jsr": {
+    "@8v/curl@0.1.7": {
+      "integrity": "dde8d0e0f2e978b5431167800d14af18f3b088b36b7fd86ed99848a155b058b4"
+    }
+  },
+  "npm": {
+    "tldts-core@6.1.82": {
+      "integrity": "sha512-Jabl32m21tt/d/PbDO88R43F8aY98Piiz6BVH9ShUlOAiiAELhEqwrAmBocjAqnCfoUeIsRU+h3IEzZd318F3w=="
+    },
+    "tldts@6.1.82": {
+      "integrity": "sha512-KCTjNL9F7j8MzxgfTgjT+v21oYH38OidFty7dH00maWANAI2IsLw2AnThtTJi9HKALHZKQQWnNebYheadacD+g==",
+      "dependencies": [
+        "tldts-core"
+      ]
+    }
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@8v/curl@~0.1.7",
+      "npm:tldts@^6.1.82"
+    ]
+  }
+}
