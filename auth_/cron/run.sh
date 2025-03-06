@@ -3,7 +3,11 @@
 DIR=$(realpath $0) && DIR=${DIR%/*}
 cd $DIR
 
-bun x envexpand ../../../conf/srv/r.env ../../../conf/srv/cron/_pg.env >/tmp/authCron.env
+bun x envexpand \
+  ../../../conf/srv/r.env \
+  ../../../conf/srv/cron/_apiToken.env \
+  ../../../conf/srv/cron/denoNotifyApi.env \
+  ../../../conf/srv/cron/_pg.env >/tmp/authCron.env
 deno=$(which deno)
 set -ex
 
