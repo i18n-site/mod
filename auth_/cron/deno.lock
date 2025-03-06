@@ -2,14 +2,25 @@
   "version": "4",
   "specifiers": {
     "jsr:@8v/curl@~0.1.7": "0.1.7",
+    "jsr:@8v/tld@~0.1.2": "0.1.2",
+    "npm:punycode@^2.3.1": "2.3.1",
     "npm:tldts@^6.1.82": "6.1.82"
   },
   "jsr": {
     "@8v/curl@0.1.7": {
       "integrity": "dde8d0e0f2e978b5431167800d14af18f3b088b36b7fd86ed99848a155b058b4"
+    },
+    "@8v/tld@0.1.2": {
+      "integrity": "0e2d54cd8a5d4c6e92502889538581c059d4bf0952f430b3d8b32f18c537d88e",
+      "dependencies": [
+        "npm:tldts"
+      ]
     }
   },
   "npm": {
+    "punycode@2.3.1": {
+      "integrity": "sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg=="
+    },
     "tldts-core@6.1.82": {
       "integrity": "sha512-Jabl32m21tt/d/PbDO88R43F8aY98Piiz6BVH9ShUlOAiiAELhEqwrAmBocjAqnCfoUeIsRU+h3IEzZd318F3w=="
     },
@@ -23,7 +34,8 @@
   "workspace": {
     "dependencies": [
       "jsr:@8v/curl@~0.1.7",
-      "npm:tldts@^6.1.82"
+      "jsr:@8v/tld@~0.1.2",
+      "npm:punycode@^2.3.1"
     ]
   }
 }

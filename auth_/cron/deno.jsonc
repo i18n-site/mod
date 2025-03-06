@@ -4,6 +4,7 @@
   "license": "MulanPSL-2.0",
   "imports": {
     "@8v/curl": "jsr:@8v/curl@^0.1.7",
-    "tldts": "npm:tldts@^6.1.82"
+    "@8v/tld": "jsr:@8v/tld@^0.1.2",
+    "punycode": "npm:punycode@^2.3.1"
   }
 }
