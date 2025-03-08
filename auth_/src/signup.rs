@@ -38,12 +38,12 @@ pub async fn mail(address: &str, password: &str, headers: &HeaderMap) -> Void {
   OK
 }
 
-pub enum SignupMailVerify {
-  Ok,
-  InvalidAddress,
-  PasswordTooShort,
-}
-
-pub async fn mail_verify(address: &str, code: &str) -> Result<SignupMailVerify> {
-  Ok(SignupMailVerify::Ok)
-}
+// pub enum SignupMailVerify {
+//   Ok,
+//   InvalidAddress,
+//   PasswordTooShort,
+// }
+//
+// pub async fn mail_verify(address: &str, code: &str) -> Result<SignupMailVerify> {
+//   Ok(SignupMailVerify::Ok)
+// }
