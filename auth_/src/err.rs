@@ -8,8 +8,8 @@ macro_rules! err {
 }
 
 pub mod password {
-  pub const TOO_SHORT: u32 = 1;
-  pub const ERR: u32 = 2;
+  pub const ERR: u32 = 1;
+  pub const TOO_SHORT: u32 = 2;
 }
 
 pub mod address {
