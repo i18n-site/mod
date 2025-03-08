@@ -9,11 +9,11 @@ macro_rules! err {
 
 pub mod password {
   pub const TOO_SHORT: u32 = 1;
+  pub const ERR: u32 = 2;
 }
 
 pub mod address {
-  pub const INVALID_MAIL: u32 = 2;
-  pub const EXIST: u32 = 3;
-  pub const DISABLE_TEMPMAIL: u32 = 4;
+  pub const INVALID_MAIL: u32 = 3;
+  pub const EXIST: u32 = 4;
+  pub const DISABLE_TEMPMAIL: u32 = 5;
 }
-
