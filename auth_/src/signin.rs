@@ -57,7 +57,7 @@ pub async fn mail(
   };
 
   let now = sts::sec() as f64;
-  let uid_bin = &intbin::u64_bin(uid)[..];
+  let uid_bin = &intbin::to_bin(uid)[..];
 
   /*
 
