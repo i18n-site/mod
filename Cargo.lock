@@ -124,7 +124,7 @@ dependencies = [
  "http",
  "iat",
  "ih",
- "intbin 0.1.2",
+ "intbin 0.2.3",
  "pc",
  "r_",
  "serde",
@@ -215,12 +215,6 @@ dependencies = [
  "rustc-demangle",
  "windows-targets",
 ]
-
-[[package]]
-name = "base64"
-version = "0.21.7"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9d297deb1925b89f2ccc13d7635fa0714f12c87adce1c75356b39ca9b7178567"
 
 [[package]]
 name = "base64"
@@ -1217,15 +1211,18 @@ dependencies = [
 
 [[package]]
 name = "intbin"
-version = "0.0.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f7d0cd59142d2aec41e99627d7cf01f99af8599b286b1e02fdce8b926dff655e"
-
-[[package]]
-name = "intbin"
 version = "0.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "533afc46b274b8de665d16124919b94764db45494743d0a8256603471a4980af"
+
+[[package]]
+name = "intbin"
+version = "0.2.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1be844dde8fa7d957a4f83fad1bc095dab35db98032b857d34d00058b6b858eb"
+dependencies = [
+ "num-traits",
+]
 
 [[package]]
 name = "itoa"
@@ -2581,12 +2578,12 @@ checksum = "1dccffe3ce07af9386bfd29e80c0ab1a8205a2fc34e4bcd40364df902cfa8f3f"
 
 [[package]]
 name = "ub64"
-version = "0.1.11"
+version = "0.1.14"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7b9771a8a948d0ba785935e44ee6d0e735982d10614de9b342c99f1ca7feddda"
+checksum = "4dddf4c65ace92078cde8705768d602151100202a27fa51b644795e107ee10e1"
 dependencies = [
- "base64 0.21.7",
- "intbin 0.0.5",
+ "base64",
+ "intbin 0.2.3",
 ]
 
 [[package]]
@@ -2677,7 +2674,7 @@ version = "0.44.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7447e703d7223b067607655e625e0dbca80822880248937da65966194c4864e6"
 dependencies = [
- "base64 0.22.1",
+ "base64",
  "data-url",
  "flate2",
  "fontdb",

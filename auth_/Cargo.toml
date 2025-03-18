@@ -16,11 +16,11 @@ ctx_ = { version = "0.1.8", features = ["set_header"] }
 tracing = "0.1.41"
 header_host = "0.1.5"
 set_cookie = "0.1.7"
-ub64 = { version = "0.1.11", features = ["u64"] }
+ub64 = { version = "0.1.14", features = ["u64"] }
 cookie_b = "0.1.19"
 sts = "0.1.23"
 xbin = "0.1.6"
-intbin = "0.1.2"
+intbin = "0.2.3"
 xkv = { version = "0.1.44", features = ["r"] }
 tokio = { version = "1.44.1", features = ["rt"] }
 simple-useragent = "0.1.2"
